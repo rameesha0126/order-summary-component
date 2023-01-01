@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+/* Using Flexbox to center the card element */
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.order-card {
+    max-width: 375px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    margin: 3em 1em;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 2em 2em 0 0;
+    margin: 0 0 2em 0;
+}
+
+h1, p, a {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.text {
+    margin: 1em 2em;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+}
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 1em 0;
+}
+
+.plan img {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.plan p {
+    display: inline-block;
+    padding: 0 0 0 1em;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+}
+
+.plan a {
+    display: inline-block;
+    padding: 0 0 0 4em;
+    color: hsl(245, 75%, 52%);
+}
+
+.price {
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+
+.plan a:hover, .plan a:active {
+    color: hsl(266, 40%, 49%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* styling the buttons */
+.button {
+    width: 90%;
+    border: none;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.proceed {
+    color: hsl(225, 100%, 98%);
+    background-color: hsl(245, 75%, 52%);
+    margin: 1em 0 0 0;
+}
+
+.cancel {
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    margin: 0 0 1em 0;
+}
+
+/* active states for buttons */
+.proceed:hover, .proceed:active {
+    background-color: hsl(266, 40%, 49%);
+    cursor: pointer;
+}
+
+.cancel:hover, .cancel:active {
+    color: hsl(223, 47%, 23%);
+    cursor: pointer;
+}
+
+/* changing backgrounds for different screen sizes */
+@media only screen and (max-width: 375px) {
+    .background {
+        background-color: hsl(225, 100%, 94%);
+        background-image: url(images/pattern-background-mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .background {
+        background-color: hsl(225, 100%, 94%);
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
